@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+  Collatz Conjecture
+</title>
+<link rel="icon" type="image/x-icon" href="file:///Users/shantanu/Desktop/Chub%20Mad%20Chub%20is%20Chub%20is%20Chub.png">
+<style>
+
+
+body {
+  background-image: url("file:///Users/shantanu/Documents/Screen_Shots/GRA-COL-DOT-CD.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+
+.Title {
+  text-align: center;
+  border-radius: 5px;
+}
+
+
+.Description {
+  background-image: url("file:///Users/shantanu/Documents/Screen_Shots/GRA-COL-LIN-AB.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  border-style: solid;
+  border-width: 1.5px;
+  border-radius: 5px;
+  margin: 0px 2px;
+  padding: 7.5px;
+  font-family: SourceSansPro, sans-serif;
+}
+
+
+.Enter {
+  font-family: SourceSansPro, sans-serif;
+}
+
+
+#b {
+  background-color: rgb(255, 0, 0);
+  border-radius: 5px;
+  color: white;
+  border: none;
+  padding: 16px 33px;
+  text-align: center;
+  font-size: 15px;
+  margin: 0px 2px;
+  cursor: pointer;
+}
+
+
+.Result {
+  background-image: url("file:///Users/shantanu/Documents/Screen_Shots/GRA-COL-LIN-DE.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  border-style: solid;
+  border-width: 1.5px;
+  border-radius: 5px;
+  margin: 0px 2px;
+  padding: 7.5px;
+  font-family: SourceSansPro, sans-serif;
+}
+
+
+</style>
+</head>
+<body>
+
+
+<div class="Title">
+  <h1 style="font-size:350%">
+  Collatz Conjecture
+  </h1>
+</div>
+
+
+<div class="Description">
+  <h1 style="font-size:115%">
+    What’s the Collatz Conjecture?
+  </h1>
+  <p>
+    The Collatz Conjecture starts with any number. If it’s even, then the next following is one-half of the current. If the number’s odd, then the following number is 3 times the current number plus one. This sequence will continue until it reaches 0 until 300 quintillion, where after that it’s unproven.
+  </p>
+</div>
+
+
+<div class="Enter">
+  <br>
+  <br>
+  <table>
+    <tr>
+      <td>
+        <p>
+        Collatz Conjecture:
+        </p>
+      </td>
+      <td>
+        <input type="number" id="CC_Number_Input" placeholder="Enter Number" autocomplete="off">
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="Save">
+  <br>
+  <button id="b">Save</button>
+</div>
+<br>
+<br>
+<br>
+
+
+<div class="Result">
+  <br>
+  <p id="GET"> </p>
+  <br>
+</div>
+
+
+
+
+
+<script>
+    let BN=document.getElementById("b");
+  BN.addEventListener("click", function() {
+    let CC_Number=document.getElementById("CC_Number_Input").value;
+  if (document.getElementById("CC_Number_Input").value.length==0)
+  {
+    alert("Try again (Click on the save button after entering a number)")
+  }
+  else {
+    let List=[]
+    while (CC_Number!=1) {
+      List.push(CC_Number)
+      if ((CC_Number%2)==0) {
+        CC_Number=CC_Number/2
+      } else {
+        CC_Number=CC_Number*3+1
+      }
+    }
+    List.push(CC_Number)
+    let Final_List=[];
+    let MaxOW=List.length;
+    let Counter=0;
+    while (Counter<MaxOW) {
+      let A=" ";
+      let IList=List[Counter];
+      let SIList=IList.toString(10);
+      let ASIList=A+SIList;
+      Final_List.push(ASIList);
+      Counter=Counter+1
+    }
+    document.getElementById("GET").innerHTML=Final_List
+  }});
+</script>
+</body>
+</html>
