@@ -85,7 +85,7 @@ body {
     What’s the Collatz Conjecture?
   </h1>
   <p>
-    The Collatz Conjecture starts with any number. If it’s even, then the next following is one-half of the current. If the number’s odd, then the following number is 3 times the current number plus one. This sequence will continue until it reaches 0 until 300 quintillion, where after that it’s unproven.
+    The Collatz Conjecture starts with any number. If it’s even, then the next following is one-half of the current. If the number’s odd, then the following number is 3 times the current number plus one. This sequence will continue until it reaches 1 up till 300 quintillion, where after that it’s unproven.
   </p>
 </div>
 
