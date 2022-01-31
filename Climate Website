@@ -71,7 +71,7 @@ body, html {
 
 .dcb {
   color: white;
-  background-color: rgba(0, 100, 75, 0.8);
+  background-color: rgba(0, 100, 75, 0.7);
   text-align: center;
   border: none;
   padding: 13px 13px;
@@ -100,13 +100,13 @@ body, html {
 
 
 
-<button class="tab same" onclick="OP('Home', this, 'rgba(0, 25, 200, 0.88)')" id="defaultOpen">Home</button>
-<button class="tab same smaller" onclick="OP('Description', this, 'rgba(0, 25, 200, 0.88)')">How Can I Help?</button>
+<button class="tab same" onclick="OP('Home', this, 'rgba(0, 150, 0, 0.9)')" id="defaultOpen">Home</button>
+<button class="tab same smaller" onclick="OP('Description', this, 'rgba(0, 150, 0, 0.9)')">How Can I Help?</button>
 <div class="dropdown">
   <button class="dropdown-button">Issues</button>
   <div class="dc">
-    <button class="dcb same" onclick="OP('Wastewater', this, 'rgba(0, 25, 200, 0.88)')">Wastewater</button>
-    <button class="dcb same" onclick="OP('Landfills', this, 'rgba(0, 25, 200, 0.88)')">Landfills</button>
+    <button class="dcb same" onclick="OP('Wastewater', this, 'rgba(0, 150, 0, 0.9)')">Wastewater</button>
+    <button class="dcb same" onclick="OP('Landfills', this, 'rgba(0, 150, 0, 0.9)')">Landfills</button>
   </div>
 </div>
 
