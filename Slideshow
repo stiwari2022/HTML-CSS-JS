@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.M {display: none}
+.img {
+  vertical-align: middle;
+  width: 100%;
+  height: 250px;
+}
+
+
+.SCC {
+  position: relative;
+  margin: auto;
+}
+
+
+.P, .N {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 15px;
+  margin-top: -17.5px;
+  color: white;
+  font-size: 17.5px;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+
+.N {
+  right: 0;
+}
+
+
+.P:hover, .N:hover {
+  background-color: rgba(0,0,0,0.75);
+}
+
+
+.T {
+  color: white;
+  font-size: 15px;
+  padding: 50px 10px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.NT {
+  color: white;
+  font-size: 10px;
+  padding: 10px 10px;
+  position: absolute;
+  top: 0;
+}
+
+
+.D {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2.5px;
+  background-color: rgba(175, 175, 175, 0.9);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .D:hover {
+  background-color: rgba(100, 100, 100, 0.975);
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+</style>
+</head>
+<body>
+
+<div class="SCC">
+
+<div class="M fade">
+  <div class="NT">1 / 3</div>
+  <img src="https://i.pinimg.com/236x/f0/d9/0f/f0d90fd99e540b2e6549956b63959639.jpg" class="img">
+  <div class="T">Caption Text</div>
+</div>
+
+<div class="M fade">
+  <div class="NT">2 / 3</div>
+  <img src="https://i.pinimg.com/236x/f0/d9/0f/f0d90fd99e540b2e6549956b63959639.jpg" class="img">
+  <div class="T">Caption Two</div>
+</div>
+
+<div class="M fade">
+  <div class="NT">3 / 3</div>
+  <img src="https://i.pinimg.com/236x/f0/d9/0f/f0d90fd99e540b2e6549956b63959639.jpg" class="img">
+  <div class="T">Caption Three</div>
+</div>
+
+<a class="P" onclick="PS(-1)">&#10094;</a>
+<a class="N" onclick="PS(1)">&#10095;</a>
+
+</div>
+<br>
+
+
+
+<div style="text-align:center">
+  <span class="D" onclick="CS(1)"></span> 
+  <span class="D" onclick="CS(2)"></span> 
+  <span class="D" onclick="CS(3)"></span> 
+</div>
+
+
+
+<script>
+var SI=1;
+SS(SI);
+
+function PS(n) {
+  SS(SI=SI+n);
+}
+
+function CS(n) {
+  SS(SI=n);
+}
+
+function SS(n) {
+  var i;
+  var slides = document.getElementsByClassName("M");
+  var Ds = document.getElementsByClassName("D");
+  if (n>slides.length) {SI=1}    
+  if (n<1) {SI=slides.length}
+  for (i=0; i<slides.length; i++) {
+      slides[i].style.display="none";  
+  }
+  for (i=0; i<Ds.length; i++) {
+      Ds[i].className = Ds[i].className.replace(" active", "");
+  }
+  slides[SI-1].style.display="block";  
+  Ds[SI-1].className+=" active";
+}
+</script>
+</body>
+</html>
