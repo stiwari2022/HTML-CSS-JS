@@ -13,13 +13,11 @@ body {font-family: Verdana, sans-serif; margin:0}
   height: 250px;
 }
 
-
 .SCC {
   position: relative;
   margin: auto;
   margin: 0;
 }
-
 
 .P, .N {
   cursor: pointer;
@@ -34,16 +32,13 @@ body {font-family: Verdana, sans-serif; margin:0}
   user-select: none;
 }
 
-
 .N {
   right: 0;
 }
 
-
 .P:hover, .N:hover {
   background-color: rgba(0,0,0,0.75);
 }
-
 
 .T {
   color: white;
@@ -55,7 +50,6 @@ body {font-family: Verdana, sans-serif; margin:0}
   text-align: center;
 }
 
-
 .NT {
   color: white;
   font-size: 10px;
@@ -63,7 +57,6 @@ body {font-family: Verdana, sans-serif; margin:0}
   position: absolute;
   top: 0;
 }
-
 
 .D {
   cursor: pointer;
@@ -80,14 +73,12 @@ body {font-family: Verdana, sans-serif; margin:0}
   background-color: rgba(100, 100, 100, 0.975);
 }
 
-
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
 
 body, html {
   height: 100%;
@@ -267,11 +258,6 @@ body, html {
   <h3>Landfills</h3>
   <p>Landfills release the same gas as cow farts</p>
 </div>
-
-
-
-
-
 
 
 
