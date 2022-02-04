@@ -94,8 +94,8 @@ body, html {
 }
 
 .smaller {
-  font-size: 15.5px;
-  padding: 16px 0px;
+  font-size: 16.25px;
+  padding: 15.5px 0px;
 }
 
 .tab:hover {
