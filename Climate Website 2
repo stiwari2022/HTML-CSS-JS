@@ -320,7 +320,8 @@ function SS(n) {
 function OP(PN, E, Color) {
   var C
   var inside;
-  var tabs;  inside=document.getElementsByClassName("inside");
+  var tabs;
+  inside=document.getElementsByClassName("inside");
   for (C=0; C<inside.length; C++) {
     inside[C].style.display="none";
   }
