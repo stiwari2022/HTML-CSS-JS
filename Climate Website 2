@@ -5,7 +5,12 @@
 <style>
 
 * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
 
 .M {display: none}
 
@@ -75,19 +80,6 @@ body {font-family: Verdana, sans-serif; margin:0}
   background-color: rgba(100, 100, 100, 0.975);
 }
 
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial;
-}
-
 .tab {
   text-align: center;
   background-color: rgba(0, 100, 0, 0.9);
@@ -142,6 +134,7 @@ body, html {
   position: absolute;
   background-color: rgb(235, 235, 235);
   box-shadow: 0px 7.5px 15px 0px rgba(0,0,0,0.2);
+  z-index: 1;
   width: 33.33333%;
 }
 
@@ -198,19 +191,19 @@ body, html {
 
 <div class="SCC">
 
-<div class="M fade">
+<div class="M">
   <div class="NT">1 / 3</div>
   <img src="https://i.pinimg.com/236x/f0/d9/0f/f0d90fd99e540b2e6549956b63959639.jpg" class="img">
   <div class="T">Since 1970, the Earth has warmed up by over 0.9° C</div>
 </div>
 
-<div class="M fade">
+<div class="M">
   <div class="NT">2 / 3</div>
   <img src="https://i.pinimg.com/236x/f0/d9/0f/f0d90fd99e540b2e6549956b63959639.jpg" class="img">
   <div class="T">An alarming increase in water crises and droughts</div>
 </div>
 
-<div class="M fade">
+<div class="M">
   <div class="NT">3 / 3</div>
   <img src="https://i.pinimg.com/236x/f0/d9/0f/f0d90fd99e540b2e6549956b63959639.jpg" class="img">
   <div class="T">This means an increase in the severity and amount of heatwaves</div>
