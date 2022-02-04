@@ -29,8 +29,8 @@ body, html {
 .P, .N {
   cursor: pointer;
   position: absolute;
-  top: 50%;
   width: auto;
+  top: 50%;
   padding: 15px;
   margin-top: -17.5px;
   color: white;
@@ -73,7 +73,7 @@ body, html {
   background-color: rgba(175, 175, 175, 0.9);
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.5s ease;
 }
 
 .active, .D:hover {
@@ -96,10 +96,6 @@ body, html {
 .smaller {
   font-size: 16.25px;
   padding: 15.5px 0px;
-}
-
-.tab:hover {
-  background-color: rgba(0, 175, 125);
 }
 
 .inside {
@@ -140,7 +136,7 @@ body, html {
 
 .dcb {
   color: rgb(235, 235, 235);
-  background-color: rgba(0, 100, 75, 0.775);
+  background-color: rgba(0, 125, 100, 0.9);
   text-align: center;
   border: none;
   padding: 13px 13px;
@@ -150,11 +146,13 @@ body, html {
   display: block;
 }
 
-.dcb:hover {background-color: rgba(0, 175, 100, 0.9);}
+.tab:hover {background-color: rgba(0, 162.5, 100, 0.95);}
+
+.dropdown:hover .dropdown-button {background-color: rgba(0, 162.5, 100, 0.95);}
+
+.dcb:hover {background-color: rgba(0, 175, 125, 0.95);}
 
 .dropdown:hover .dc {display: block;}
-
-.dropdown:hover .dropdown-button {background-color: rgba(0, 175, 125);}
 
 #Home {background-color: white;}
 #Description {background-color: white;}
@@ -251,6 +249,7 @@ body, html {
   <h3>Landfills</h3>
   <p>Landfills release the same gas as cow farts</p>
 </div>
+
 
 
 
