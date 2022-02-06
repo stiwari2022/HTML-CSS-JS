@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +10,8 @@ body, html {
   margin: 0;
   font-family: Arial;
 }
+
+.M {display: none}
 
 .img {
   vertical-align: middle;
@@ -37,11 +38,13 @@ body, html {
   user-select: none;
 }
 
-.M {display: none}
+.N {
+  right: 0;
+}
 
-.N {right: 0;}
-
-.P:hover, .N:hover {background-color: rgba(0,0,0,0.75);}
+.P:hover, .N:hover {
+  background-color: rgba(0,0,0,0.75);
+}
 
 .T {
   color: white;
@@ -72,7 +75,9 @@ body, html {
   transition: background-color 0.5s ease;
 }
 
-.active, .D:hover {background-color: rgba(100, 100, 100, 0.975);}
+.active, .D:hover {
+  background-color: rgba(100, 100, 100, 0.975);
+}
 
 .tab {
   text-align: center;
@@ -140,6 +145,29 @@ body, html {
   display: block;
 }
 
+.OC {
+  background-color: rgba(0, 200, 100, 0.8);
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  transition: 0.375s;
+}
+
+.AC, .OC:hover {
+  background-color: rgba(0, 225, 175, 0.85); 
+}
+
+.IP {
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
 .tab:hover {background-color: rgba(0, 162.5, 100, 0.95);}
 
 .dropdown:hover .dropdown-button {background-color: rgba(0, 162.5, 100, 0.95);}
@@ -149,7 +177,8 @@ body, html {
 .dropdown:hover .dc {display: block;}
 
 #Home {background-color: white;}
-#Description {background-color: white;}
+#How-Can-I-Help {background-color: white;}
+#Descriptions {background-color: white;}
 #Wastewater {background-color: white;}
 #Landfills {background-color: white;}
 
@@ -162,10 +191,11 @@ body, html {
 
 
 <button class="tab same" onclick="OP('Home', this, 'rgba(0, 150, 0, 0.9)')" id="defaultOpen">Home</button>
-<button class="tab same smaller" onclick="OP('Description', this, 'rgba(0, 150, 0, 0.9)')">How Can I Help?</button>
+<button class="tab same smaller" onclick="OP('How-Can-I-Help', this, 'rgba(0, 150, 0, 0.9)')">How Can I Help?</button>
 <div class="dropdown">
   <button class="dropdown-button">Issues</button>
   <div class="dc">
+    <button class="dcb same" onclick="OP('Descriptions', this, 'rgba(0, 150, 0, 0.9)')">Descriptions</button>
     <button class="dcb same" onclick="OP('Wastewater', this, 'rgba(0, 150, 0, 0.9)')">Wastewater</button>
     <button class="dcb same" onclick="OP('Landfills', this, 'rgba(0, 150, 0, 0.9)')">Landfills</button>
   </div>
@@ -221,9 +251,30 @@ body, html {
 
 
 
-<div id="Description" class="inside">
-  <h3>Description</h3>
+<div id="How-Can-I-Help" class="inside">
+  <h3>How Can I Help&#x3f;</h3>
   <p>Stuff</p> 
+</div>
+
+
+
+
+
+<div id="Descriptions" class="inside">
+  <h3>Descriptions</h3>
+
+
+<button class="OC">Wastewater</button>
+<div class="IP">
+  <p>Wastewater is used water</p>
+</div>
+
+<button class="OC">Landfills</button>
+<div class="IP">
+  <p>Landfills release the same gas as cow farts</p>
+</div>
+
+
 </div>
 
 
@@ -259,16 +310,27 @@ body, html {
 
 
 <script>
+var OC=document.getElementsByClassName("OC");
+var i;
+for (i=0; i<OC.length; i++) {
+  OC[i].addEventListener("click", function() {
+    this.classList.toggle("AC");
+    var panel=this.nextElementSibling;
+    if (panel.style.display==="block") {
+      panel.style.display="none";
+    } else {
+      panel.style.display="block";}});}
+</script>
+
+<script>
 var SI=1;
 SS(SI);
 
 function PS(n) {
-  SS(SI=SI+n);
-}
+  SS(SI=SI+n);}
 
 function CS(n) {
-  SS(SI=n);
-}
+  SS(SI=n);}
 
 function SS(n) {
   var i;
@@ -277,14 +339,11 @@ function SS(n) {
   if (n>slides.length) {SI=1}    
   if (n<1) {SI=slides.length}
   for (i=0; i<slides.length; i++) {
-      slides[i].style.display="none";  
-  }
+      slides[i].style.display="none";}
   for (i=0; i<Ds.length; i++) {
-      Ds[i].className = Ds[i].className.replace(" active", "");
-  }
+      Ds[i].className = Ds[i].className.replace(" active", "");}
   slides[SI-1].style.display="block";  
-  Ds[SI-1].className+=" active";
-}
+  Ds[SI-1].className+=" active";}
 </script>
 
 <script>
@@ -294,14 +353,12 @@ function OP(PN, E, Color) {
   var tabs;
   inside=document.getElementsByClassName("inside");
   for (C=0; C<inside.length; C++) {
-    inside[C].style.display="none";
-  }
+    inside[C].style.display="none";}
   tabs=document.getElementsByClassName("same");
   for (C=0; C<tabs.length; C++) {
     tabs[C].style.backgroundColor="";
   }  document.getElementById(PN).style.display="block";
-  E.style.backgroundColor=Color;
-}
+  E.style.backgroundColor=Color;}
 document.getElementById("defaultOpen").click();
 </script>
 </body>
