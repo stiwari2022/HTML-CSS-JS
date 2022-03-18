@@ -94,13 +94,13 @@ body, html {
 
 .smaller {
   font-size: 16.25px;
-  padding: 15.5px 0px;
+  padding: 16px 0px;
 }
 
 .inside {
   display: none;
   color: black;
-  padding: 33px 20px;
+  padding: 33px 22px;
   height: 100%;
 }
 
