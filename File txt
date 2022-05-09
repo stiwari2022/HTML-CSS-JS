@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  br.AA {
+    display: block;
+    content: "";
+    margin-top: 5px;
+  }
+</style>
+
+
+
+<table>
+  <tr>
+    <td Valign="top">
+      Name:
+    </td>
+    <td>
+      <input type="text" id="File_Name" placeholder="File" autocomplete="off">
+      <br class="AA">
+    </td>
+  </tr>
+  <tr>
+    <td Valign="top">
+      Content:
+    </td>
+    <td>
+      <textarea id="txtContent" rows="4" placeholder="Enter Text" autocomplete="off"></textarea>
+    </td>
+</table>
+<br>
+<input type="button" id="DownloadB" value="Download txt File"/>
+
+
+
+<script>
+  function D(Name, Content) {
+    var E=document.createElement('a');
+    E.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(Content));
+    E.setAttribute('download', Name);
+    E.style.display ='none';
+    document.body.appendChild(E);
+    E.click();
+    document.body.removeChild(E);
+  }
+  document.getElementById("DownloadB").addEventListener("click", function(){
+    var Content = document.getElementById("txtContent").value;
+    var Nam=document.getElementById("File_Name").value;
+    var Name=Nam+".txt"
+    D(Name, Content);}, false);
+</script>
+</body>
+</html>
