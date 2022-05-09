@@ -157,7 +157,7 @@ body {
       Final_List.push(ASIList);
       Counter=Counter+1
     }
-    document.getElementById("GET").innerHTML=Final_List
+    Final_List=document.getElementById("GET").innerHTML
   }});
 </script>
 </body>
