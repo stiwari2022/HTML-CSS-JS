@@ -46,7 +46,7 @@
     document.body.removeChild(E);
   }
   document.getElementById("DownloadB").addEventListener("click", function(){
-    var Content = document.getElementById("txtContent").value;
+    var Content=document.getElementById("txtContent").value;
     var Nam=document.getElementById("File_Name").value;
     var Name=Nam+".txt"
     D(Name, Content);}, false);
