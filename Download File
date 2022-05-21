@@ -25,7 +25,6 @@
     <td>
       <select name="File_Type" id="File_Type" onchange="sus()" style="font-family: 'Arial';">
       <option selected>TXT</option>
-      <option>PDF</option>
       <option>HTML</option>
       <option>CSV</option>
       <option>PY</option>
@@ -40,6 +39,7 @@
     <td>
       <textarea id="Content" style="font-family: 'Arial';" rows="4" placeholder="Enter Text" autocomplete="off"></textarea>
     </td>
+  </tr>
 </table>
 <br>
 <input type="button" id="DownloadB" value="Download File"/>
