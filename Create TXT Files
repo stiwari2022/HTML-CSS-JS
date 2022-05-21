@@ -5,9 +5,10 @@
 <style>
   tr, td {padding: 10px 10px;}
 </style>
+</head>
 
 
-
+<body>
 <table>
   <tr>
     <td Valign="top">
