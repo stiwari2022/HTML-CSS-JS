@@ -42,7 +42,7 @@
     document.body.appendChild(E);
     E.click();
     document.body.removeChild(E);}
-  document.getElementById("DownloadB").addEventListener("click", function(){
+  document.getElementById("DownloadB").addEventListener("click", function() {
     var Content=document.getElementById("txtContent").value;
     var Nam=document.getElementById("File_Name").value;
     var Name=Nam+".txt"
