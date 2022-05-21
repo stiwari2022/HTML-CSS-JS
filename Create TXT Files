@@ -29,6 +29,7 @@
     <td>
       <textarea id="txtContent" rows="4" placeholder="Enter Text" autocomplete="off"></textarea>
     </td>
+  </tr>
 </table>
 <br>
 <input type="button" id="DownloadB" value="Download txt File"/>
@@ -43,8 +44,7 @@
     E.style.display ='none';
     document.body.appendChild(E);
     E.click();
-    document.body.removeChild(E);
-  }
+    document.body.removeChild(E);}
   document.getElementById("DownloadB").addEventListener("click", function(){
     var Content=document.getElementById("txtContent").value;
     var Nam=document.getElementById("File_Name").value;
