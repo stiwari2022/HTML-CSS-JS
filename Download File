@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  tr, td {padding: 10px 10px;}
+</style>
+</head>
+
+
+<body>
+<table>
+  <tr>
+    <td valign="top">
+      Name:
+    </td>
+    <td>
+      <input type="text" id="File_Name" onchange="Replace_D()" style="font-family: 'Arial';" placeholder="File" autocomplete="off">
+      <br>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+      File Type:
+    </td>
+    <td>
+      <select name="File_Type" id="File_Type" onchange="sus()" style="font-family: 'Arial';">
+      <option selected>TXT</option>
+      <option>PDF</option>
+      <option>HTML</option>
+      <option>CSV</option>
+      <option>PY</option>
+      <option>JAVA</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+      Content:
+    </td>
+    <td>
+      <textarea id="Content" style="font-family: 'Arial';" rows="4" placeholder="Enter Text" autocomplete="off"></textarea>
+    </td>
+</table>
+<br>
+<input type="button" id="DownloadB" value="Download File"/>
+
+
+<script>
+  function Replace_D() {
+    let x=document.getElementById("File_Name");
+    x.value=x.value.replace(/[^\x00-\x7F]/g, "");
+    x.value=x.value.replace(/\~/g, "");
+    x.value=x.value.replace(/\`/g, "");
+    x.value=x.value.replace(/\!/g, "");
+    x.value=x.value.replace(/\@/g, "");
+    x.value=x.value.replace(/\#/g, "");
+    x.value=x.value.replace(/\$/g, "");
+    x.value=x.value.replace(/\%/g, "");
+    x.value=x.value.replace(/\^/g, "");
+    x.value=x.value.replace(/\&/g, "");
+    x.value=x.value.replace(/\*/g, "");
+    x.value=x.value.replace(/\(/g, "");
+    x.value=x.value.replace(/\)/g, "");
+    x.value=x.value.replace(/\+/g, "");
+    x.value=x.value.replace(/\=/g, "");
+    x.value=x.value.replace(/\{/g, "");
+    x.value=x.value.replace(/\}/g, "");
+    x.value=x.value.replace(/\[/g, "");
+    x.value=x.value.replace(/\]/g, "");
+    x.value=x.value.replace(/\|/g, "");
+    x.value=x.value.replace(/\\/g, "");
+    x.value=x.value.replace(/\:/g, "");
+    x.value=x.value.replace(/\;/g, "");
+    x.value=x.value.replace(/\"/g, "");
+    x.value=x.value.replace(/\'/g, "");
+    x.value=x.value.replace(/\</g, "");
+    x.value=x.value.replace(/\>/g, "");
+    x.value=x.value.replace(/\,/g, "");
+    x.value=x.value.replace(/\./g, "");
+    x.value=x.value.replace(/\?/g, "");
+    x.value=x.value.replace(/\//g, "");}
+  function Replace_D2() {let x=document.getElementById("Content"); x.value=x.value.replace(/[^\x00-\x7F]/g, "");}
+  function sus() {x=document.getElementById("File_Type").value;}
+  function D(Name, Content) {
+    let E=document.createElement('a');
+    E.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(Content));
+    E.setAttribute('download', Name);
+    E.style.display ='none';
+    document.body.appendChild(E);
+    E.click();
+    document.body.removeChild(E);}
+  let x="txt"
+  document.getElementById("DownloadB").addEventListener("click", function() {
+    let Content=document.getElementById("Content").value;
+    let Name=document.getElementById("File_Name").value;
+    x=x.toLowerCase()
+    Name=Name+"."+x
+    D(Name, Content);}, false);
+</script>
+</body>
+</html>
