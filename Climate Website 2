@@ -22,8 +22,7 @@ body, html {
 .SCC {
   position: relative;
   margin: auto;
-  margin: 0;
-}
+  margin: 0;}
 
 .P, .N {
   cursor: pointer;
@@ -357,7 +356,7 @@ function OP(PN, E, Color) {
   tabs=document.getElementsByClassName("same");
   for (C=0; C<tabs.length; C++) {
     tabs[C].style.backgroundColor="";
-  }  document.getElementById(PN).style.display="block";
+  } document.getElementById(PN).style.display="block";
   E.style.backgroundColor=Color;}
 document.getElementById("defaultOpen").click();
 </script>
