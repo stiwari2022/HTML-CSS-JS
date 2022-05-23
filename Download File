@@ -15,7 +15,6 @@
     </td>
     <td>
       <input type="text" id="File_Name" onchange="Replace_D()" style="font-family: 'Arial';" placeholder="File" autocomplete="off">
-      <br>
     </td>
   </tr>
   <tr>
@@ -47,8 +46,8 @@
 
 <script>
   function Replace_D() {
-    let x=document.getElementById("File_Name");
-    x.value=x.value.replace(/[^\x00-\x7F]/g, "");
+		let x=document.getElementById("File_Name");
+		x.value=x.value.replace(/[^\x00-\x7F]/g, "");
     x.value=x.value.replace(/\~/g, "");
     x.value=x.value.replace(/\`/g, "");
     x.value=x.value.replace(/\!/g, "");
@@ -82,10 +81,10 @@
   function Replace_D2() {let x=document.getElementById("Content"); x.value=x.value.replace(/[^\x00-\x7F]/g, "");}
   function sus() {x=document.getElementById("File_Type").value;}
   function D(Name, Content) {
-    let E=document.createElement('a');
-    E.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(Content));
-    E.setAttribute('download', Name);
-    E.style.display ='none';
+    let E=document.createElement("a");
+    E.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(Content));
+    E.setAttribute("download", Name);
+    E.style.display="none";
     document.body.appendChild(E);
     E.click();
     document.body.removeChild(E);}
@@ -93,8 +92,7 @@
   document.getElementById("DownloadB").addEventListener("click", function() {
     let Content=document.getElementById("Content").value;
     let Name=document.getElementById("File_Name").value;
-    x=x.toLowerCase()
-    Name=Name+"."+x
+    Name=Name+"."+x.toLowerCase()
     D(Name, Content);}, false);
 </script>
 </body>
