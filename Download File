@@ -2,16 +2,16 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  tr, td {padding: 10px 10px;}
+	tr, td {padding: 10px 10px;}
 </style>
 </head>
 
 
 <body>
 <table>
-  <tr>
-    <td valign="top">
-      Name:
+	<tr>
+		<td valign="top">
+			Name:
     </td>
     <td>
       <input type="text" id="File_Name" onchange="Replace_D()" style="font-family: 'Arial';" placeholder="File" autocomplete="off">
