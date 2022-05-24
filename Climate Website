@@ -296,9 +296,7 @@ function SS(n) {
 		Ds[i].className = Ds[i].className.replace(" active", "");}
 	Slides[SI-1].style.display="block";
 	Ds[SI-1].className+=" active";}
-</script>
 
-<script>
 function OP(PN, E, Color) {
 	var C;
 	var inside;
