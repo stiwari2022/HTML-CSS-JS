@@ -293,9 +293,9 @@ function SS(n) {
 	for (i=0; i<Slides.length; i++) {
 		Slides[i].style.display="none";}
 	for (i=0; i<Ds.length; i++) {
-		Ds[i].className = Ds[i].className.replace(" active", "");}
+		Ds[i].className = Ds[i].className.replace("active", "");}
 	Slides[SI-1].style.display="block";
-	Ds[SI-1].className+=" active";}
+	Ds[SI-1].className+="active";}
 
 function OP(PN, E, Color) {
 	var C;
