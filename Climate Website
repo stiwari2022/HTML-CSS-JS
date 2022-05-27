@@ -266,18 +266,15 @@ body, html {
 
 
 <script>
-var OC=document.getElementsByClassName("OC");
-var i;
-for (i=0; i<OC.length; i++) {
-	OC[i].addEventListener("click", function() {
-		this.classList.toggle("AC");
-		var panel=this.nextElementSibling;
-		if (panel.style.display==="block") {
-			panel.style.display="none";}
-		else {
-			panel.style.display="block";}});}
+let OC=document.getElementsByClassName("OC");
+let i;
+for (i=0; i<OC.length; i++) {OC[i].addEventListener("click", function() {
+	this.classList.toggle("AC");
+	let panel=this.nextElementSibling;
+	if (panel.style.display==="block") {panel.style.display="none";}
+	else {panel.style.display="block";}});}
 
-var SI=1;
+let SI=1;
 SS(SI);
 
 function PS(n) {SS(SI=SI+n);}
@@ -285,29 +282,25 @@ function PS(n) {SS(SI=SI+n);}
 function CS(n) {SS(SI=n);}
 
 function SS(n) {
-	var i;
-	var Slides = document.getElementsByClassName("M");
-	var Ds = document.getElementsByClassName("D");
+	let i;
+	let Slides = document.getElementsByClassName("M");
+	let Ds = document.getElementsByClassName("D");
 	if (n>Slides.length) {SI=1}    
 	if (n<1) {SI=Slides.length}
-	for (i=0; i<Slides.length; i++) {
-		Slides[i].style.display="none";}
-	for (i=0; i<Ds.length; i++) {
-		Ds[i].className = Ds[i].className.replace("active", "");}
+	for (i=0; i<Slides.length; i++) {Slides[i].style.display="none";}
+	for (i=0; i<Ds.length; i++) {Ds[i].className = Ds[i].className.replace("active", "");}
 	Slides[SI-1].style.display="block";
 	Ds[SI-1].className+="active";}
 
 function OP(PN, E, Color) {
-	var C;
-	var inside;
-	var tabs;
+	let C;
+	let inside;
+	let tabs;
 	inside=document.getElementsByClassName("inside");
-	for (C=0; C<inside.length; C++) {
-		inside[C].style.display="none";}
+	for (C=0; C<inside.length; C++) {inside[C].style.display="none";}
 	tabs=document.getElementsByClassName("same");
-	for (C=0; C<tabs.length; C++) {
-		tabs[C].style.backgroundColor="";}
-		document.getElementById(PN).style.display="block";
+	for (C=0; C<tabs.length; C++) {tabs[C].style.backgroundColor="";}
+	document.getElementById(PN).style.display="block";
 	E.style.backgroundColor=Color;}
 document.getElementById("defaultOpen").click();
 </script>
