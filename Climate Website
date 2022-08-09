@@ -93,7 +93,7 @@ body, html {
 }
 
 .smaller {
-  font-size: 16.25px;
+  font-size: 16px;
   padding: 16px 0px;
 }
 
